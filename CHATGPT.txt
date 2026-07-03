@@ -1,0 +1,476 @@
+te tengo un problema, quiero saber cuanto nos ahorramos en tiempo con una web que ya no hara transferencia, te explico un poco hoy en dia, cuando un cliente CJ llama, y cualquier asesor lo atienda, lo primero que hace es consultar DNI validar sus nombres y si es CJ, lo deriva, esta derivacion por lo general puede demorar 1min y medio pongamosle, ahora bien, cuando transfiere el otro contesta y nuevamente valida los datos y le da una informacion.. estoy creando una web, donde el gestor va poder visualizar todo y ya no debe transferir sino simplemente tendra todos los  datos y ahi esta mi solyucuon, ahora bien si yo al dia tengo 3048 llamadas recibidas porque es inbound de las cuales 560 son CJ osea de esos casos, cuanto crees que me ahorraria en hombre hora, quiero mostrar el impacto
+
+Sí, se puede estimar bastante bien. Hagamos el cálculo con los datos que das.
+
+Datos
+Llamadas inbound por día: 3,048
+Casos CJ: 560 llamadas/día
+Tiempo promedio de transferencia: 1.5 minutos (90 segundos)
+
+Asumiré primero que esos 1.5 minutos incluyen todo el proceso de transferir (espera, contestación y segunda validación). Luego te muestro otro escenario.
+
+Cálculo del ahorro diario
+
+560 llamadas × 1.5 minutos = 840 minutos ahorrados por día
+
+840 minutos equivalen a:
+
+14 horas hombre por día
+Ahorro mensual
+
+Si trabajan 30 días:
+
+14 × 30 = 420 horas hombre al mes
+
+Si trabajan 22 días hábiles:
+
+14 × 22 = 308 horas hombre al mes
+Equivalencia en asesores
+
+Una jornada de 8 horas equivale a:
+
+14 ÷ 8 = 1.75 asesores por día
+
+Es decir, el tiempo recuperado cada día equivale aproximadamente al trabajo de casi 2 asesores de tiempo completo.
+
+Si además eliminas la segunda validación
+
+Mencionas que el segundo asesor también vuelve a validar datos antes de brindar la información.
+
+Si esa segunda validación toma, por ejemplo, 30 segundos adicionales, entonces:
+
+Tiempo ahorrado por llamada:
+
+Transferencia: 1.5 min
+Segunda validación: 0.5 min
+
+Total = 2 minutos por llamada
+
+Entonces:
+
+560 × 2 = 1,120 minutos
+
+= 18.67 horas hombre por día
+
+Al mes (30 días):
+
+560 horas hombre
+Cómo podrías presentar el impacto
+
+Actualmente se reciben aproximadamente 3,048 llamadas inbound por día, de las cuales 560 corresponden a clientes CJ. Cada uno de estos casos requiere una transferencia a otro asesor, proceso que toma en promedio 1.5 minutos, además de una nueva validación de identidad.
+
+Con la nueva plataforma, el asesor que atiende inicialmente contará con toda la información necesaria para resolver el requerimiento sin transferir la llamada.
+
+Impacto esperado:
+
+560 transferencias eliminadas por día.
+840 minutos recuperados diariamente.
+14 horas hombre ahorradas por día.
+Entre 308 y 420 horas hombre recuperadas al mes, dependiendo de los días de operación.
+Equivalente a recuperar la capacidad de casi 2 asesores de jornada completa cada día, además de mejorar la experiencia del cliente al evitar esperas y repetición de datos.
+Incluso el ahorro podría ser mayor
+
+El cálculo anterior solo considera el tiempo de la transferencia. Si la web también evita:
+
+la segunda validación de identidad,
+el tiempo de espera mientras el otro asesor responde,
+la explicación del caso entre asesores,
+y posibles retransferencias,
+
+el ahorro real podría acercarse a 18–20 horas hombre por día, dependiendo de los tiempos medidos.
+
+Si este análisis es para una presentación a gerencia, puedo ayudarte a construir un caso de negocio (Business Case) con indicadores como ahorro anual, FTE recuperados, reducción del TMO (AHT), mejora del NPS y ROI del proyecto.
+
+Aquí la clave no es vender la web como una herramienta, sino el problema de negocio que resuelve. A la gerencia normalmente le interesa más el "por qué" que el "cómo".
+
+Podrías construir la narrativa así:
+
+El desafío
+
+Los sábados, los clientes CJ que llaman al canal inbound requieren ser atendidos por un grupo especializado. Sin embargo, ese equipo no opera ese día, lo que genera una brecha en la atención y limita la capacidad de resolver las consultas en el primer contacto.
+
+La oportunidad
+
+En lugar de depender de un grupo especializado, se identificó la posibilidad de habilitar a cualquier asesor del canal inbound para resolver las consultas CJ, poniendo a su disposición toda la información necesaria en una única plataforma.
+
+La solución
+
+Se desarrolló una plataforma que centraliza la información del cliente CJ y guía al asesor durante la atención, eliminando la necesidad de realizar transferencias y permitiendo resolver la consulta desde el primer contacto, incluso cuando el equipo especializado no se encuentra disponible.
+
+Beneficios para el negocio
+✅ Continuidad operativa los sábados.
+✅ Mayor resolución en el primer contacto (FCR).
+✅ Eliminación de transferencias innecesarias.
+✅ Recuperación de aproximadamente 14 horas hombre por día (420 horas al mes, según el supuesto de 30 días).
+✅ Mejor experiencia para el cliente al evitar esperas y repetir la validación de datos.
+✅ Mayor productividad de la operación sin incrementar la dotación.
+Un título más "vendedor"
+
+En lugar de:
+
+Implementación de Web CJ
+
+Usa algo como:
+
+Transformando la atención CJ: de depender de especialistas a empoderar a todo el canal Inbound
+
+O:
+
+De transferir llamadas a resolver en el primer contacto
+
+O:
+
+Una solución para garantizar continuidad operativa y mejorar la experiencia del cliente
+
+Una frase de cierre que suele tener impacto
+
+Lo que comenzó como una solución para cubrir una brecha operativa de los sábados evolucionó hacia una mejora del modelo de atención, permitiendo que cualquier asesor resuelva consultas CJ en el primer contacto, reduciendo tiempos, eliminando transferencias y recuperando capacidad operativa.
+
+Ese mensaje cambia la percepción del proyecto: deja de ser una "web para los sábados" y pasa a ser una transformación del modelo de atención. Esa es una propuesta mucho más sólida para una audiencia ejecutiva.
+
+esto hace mi producto 1. Para el Agente: El fin del "Llame el lunes" e información en una sola pantallaAntes, cuando un cliente llamaba (por ejemplo, un sábado o fuera de horario de oficina), el asesor no tenía los datos a la mano porque dependía de actualizaciones externas o de gestores especializados, lo que obligaba a decirle al cliente: "Llame el lunes" o a transferir la llamada.  Ahora, lo que hace la web de cara al asesor es:Unifica registros en una sola ficha: El agente ingresa un identificador (como el CU, CJ o Número de Documento) y la web consolida en una sola pantalla todos los productos que ese cliente tiene (Tarjeta de Crédito, Préstamo Efectivo, etc.), detallando el capital, la deuda total y el importe de cancelación al instante.  Búsqueda ágil y resolución al primer contacto: Permite que cualquier asesor de la llamada entrante (Inbound) tenga visibilidad completa de inmediato. Ya no tiene que navegar por múltiples sistemas o hacer esperar al cliente; puede cerrar acuerdos de pago precisos en la primera llamada.  2. Para el Supervisor: Automatización de la carga y estrategiaAntes, el procesamiento de la información de las carteras dependía de procesos manuales lentos.Ahora, lo que hace la web para el supervisor es:Proceso de Carga en 4 clics: Automatiza la ingesta de datos de la gestión mediante un flujo intuitivo guiado paso a paso: Seleccionar archivo (Excel .xlsx o .xls), Validar, Truncar y Cargar.  Cruces automatizados (Actualizar Teléfonos): Tiene un botón directo para ejecutar cruces masivos de bases de datos con tablas de scores, optimizando la contactabilidad en la campaña.  Estandarización y control: Permite al supervisor configurar qué columnas son visibles (activando o desactivando campos como CU, CJ, Cliente, Tipo de Canal, Estudio, etc.) para ordenar la vista que usarán los agentes y analizar las métricas en tiempo real.  En resumen, tu producto elimina los silos de información y los procesos manuales, transformando una operación que antes era reactiva y fragmentada en un modelo proactivo donde cualquier asesor puede resolver el caso de cualquier cliente con datos precisos y centralizados en tiempo real.  donde crees que este el impacto, que el negocio gane, que me digan aca gano dinero.. como lo podria vender
+
+Tu producto tiene algo muy valioso: no vende una web, vende capacidad operativa. Ese es el cambio de enfoque.
+
+Cuando un gerente escucha "una web que muestra información", piensa en un desarrollo de TI. Cuando escucha "recuperamos 420 horas hombre al mes y aumentamos la resolución en el primer contacto", empieza a pensar en negocio.
+
+El mensaje no debería ser "qué hace"
+
+Debería ser:
+
+Convertimos llamadas que antes no podían resolverse en llamadas resueltas en el primer contacto, sin aumentar personal.
+
+Ese es el valor.
+
+¿Dónde gana dinero el negocio?
+1. Mayor productividad (el más fácil de cuantificar) 💰
+
+Antes:
+
+560 llamadas CJ.
+Se transferían.
+Dos asesores intervenían.
+Tiempo perdido en espera y doble validación.
+
+Ahora:
+
+Un solo asesor resuelve.
+
+Resultado:
+
+Recuperas aproximadamente 14 horas hombre por día.
+Esa capacidad se utiliza para atender más llamadas sin contratar más personal.
+
+La forma de venderlo:
+
+Recuperamos capacidad equivalente a casi 2 asesores por día sin incrementar la dotación.
+
+Eso es ahorro.
+
+2. Más promesas y más pagos 💰💰
+
+Antes:
+
+El cliente llamaba sábado.
+"Llame el lunes."
+Muchos nunca volvían.
+
+Ahora:
+
+El asesor puede negociar inmediatamente.
+
+Eso significa:
+
+más acuerdos de pago
+más promesas de pago
+más recupero
+
+Aquí está probablemente el mayor impacto económico.
+
+Por ejemplo:
+
+Si de los 560 clientes:
+
+antes solo el 40% recibía solución
+ahora el 70%
+
+son 168 clientes adicionales atendidos.
+
+Si solo el 15% termina pagando una deuda promedio de S/300:
+
+168 × 15% × 300
+
+= S/7,560 recuperados por día.
+
+Ese tipo de cálculo es el que enamora a un gerente financiero.
+
+(No importa si luego cambian los porcentajes; la lógica de negocio es clara.)
+
+3. Mejor experiencia del cliente
+
+Antes:
+
+Cliente
+→ cuenta su caso
+→ espera
+→ transferencia
+→ vuelve a validar
+→ vuelve a explicar
+
+Ahora
+
+Cliente
+→ una llamada
+→ una validación
+→ solución
+
+Eso mejora indicadores como:
+
+FCR (First Call Resolution)
+CSAT
+NPS
+Tiempo promedio de atención
+4. Riesgo operativo
+
+Antes:
+
+Si el especialista faltaba...
+
+No había atención.
+
+Ahora:
+
+Cualquier asesor puede atender.
+
+Ya no existe dependencia de una sola persona o equipo.
+
+Yo no vendería la web.
+
+Vendería esto.
+
+De un modelo dependiente...
+
+Especialista
+
+↓
+
+Transferencias
+
+↓
+
+Horarios
+
+↓
+
+Información dispersa
+
+↓
+
+Cliente espera
+
+A un modelo escalable
+
+A un modelo escalable
+
+Cualquier asesor
+
+↓
+
+Información centralizada
+
+↓
+
+Resolución inmediata
+
+↓
+
+Mayor productividad
+
+↓
+
+Mayor recuperación
+
+Si fuera un pitch de un minuto diría algo así:
+
+Identificamos que una parte importante de las llamadas no generaba valor porque dependía de un equipo especializado que no siempre estaba disponible. En lugar de aumentar dotación, cambiamos el modelo de atención. Centralizamos toda la información del cliente en una única plataforma para que cualquier asesor pueda resolver la consulta desde el primer contacto. Con ello eliminamos transferencias, recuperamos aproximadamente 14 horas hombre por día, aseguramos continuidad operativa incluso los sábados y aumentamos las oportunidades de recuperación al atender al cliente en el momento en que decide llamar.
+
+Y si fuera una lámina ejecutiva, el título sería:
+No desarrollamos una web. Transformamos el modelo de atención.
+
+Debajo, cuatro bloques con los beneficios clave:
+
+Antes	Después
+Dependencia del especialista	Cualquier asesor puede resolver
+Transferencias y esperas	Resolución en el primer contacto
+Información en múltiples sistemas	Vista única del cliente
+Atención limitada por horarios	Continuidad operativa 24/7 según disponibilidad del canal
+
+Y en la parte inferior, los indicadores de negocio:
+
+⏱️ 14 horas hombre recuperadas por día.
+📞 560 transferencias eliminadas diariamente.
+💰 Más oportunidades de recuperación al atender al cliente en el momento del contacto.
+📈 Mayor productividad sin incrementar la dotación.
+
+Ese enfoque deja de hablar de funcionalidades y pasa a mostrar cómo la solución mejora la operación y genera valor para el negocio.
+
+pero y si solo se usa el sabado? como ganaria la empresa
+
+Esa es una muy buena pregunta. De hecho, cambia completamente la forma de vender el proyecto.
+
+Si solo se usa los sábados, entonces no debes venderlo como un ahorro de horas hombre, porque el gerente te puede responder:
+
+"Los asesores igual están trabajando el sábado, no estoy ahorrando personal."
+
+Y tendría razón.
+
+El valor está en otro lado.
+
+¿Qué problema tenía el negocio?
+
+Antes, un sábado ocurría esto:
+
+Cliente llama
+        │
+Es cliente CJ
+        │
+No hay gestor especializado
+        │
+"No podemos atenderlo, llame el lunes"
+        │
+Cliente cuelga
+
+¿Qué pasa con ese cliente?
+
+Puede no volver a llamar.
+Si quería pagar, se pierde la oportunidad.
+La deuda envejece.
+Aumenta la probabilidad de mora.
+Se deteriora la experiencia del cliente.
+
+Ahí está el dinero.
+
+Entonces la venta cambia completamente
+
+No es
+
+"Creamos una web."
+
+Es
+
+"Habilitamos un día de cobranza que antes estaba prácticamente perdido."
+
+Eso sí es negocio.
+
+Imagina este ejemplo
+
+560 clientes CJ llaman un sábado.
+
+Antes:
+
+560 no podían ser atendidos.
+Muchos debían volver a llamar.
+
+Si solo el 20% nunca vuelve, son:
+
+560 × 20%
+
+= 112 oportunidades perdidas cada sábado.
+
+Ahora imagina que de esos 112,
+
+solo 15 terminan pagando.
+
+y el pago promedio es S/500.
+
+15 × 500
+
+= S/7,500 recuperados en un solo sábado.
+
+Al año:
+
+S/7,500 × 52 sábados
+
+= S/390,000.
+
+No estoy diciendo que ese sea tu número; es un ejemplo de cómo convertir la mejora operativa en impacto económico. Si tienes datos de promesas de pago, monto promedio o tasa de recuperación, puedes reemplazar esos supuestos por cifras reales.
+
+Eso es exactamente el tipo de razonamiento que hace un gerente.
+
+El verdadero beneficio es éste
+Antes
+
+El negocio tenía un horario.
+
+Los clientes no.
+
+Cuando el cliente llamaba fuera del horario del especialista...
+
+se perdía una oportunidad de recuperación.
+
+Después
+
+El negocio aprovecha el momento en que el cliente decide llamar.
+
+No importa si es sábado.
+
+No importa si el especialista está.
+
+Cualquier asesor puede cerrar la gestión.
+
+Yo pondría una lámina así
+Antes
+
+❌ Cliente listo para pagar
+
+↓
+
+❌ No hay especialista
+
+↓
+
+❌ "Llame el lunes"
+
+↓
+
+💸 Oportunidad de recuperación perdida
+
+Después
+
+✅ Cliente listo para pagar
+
+↓
+
+✅ Cualquier asesor accede a la información
+
+↓
+
+✅ Acuerdo inmediato
+
+↓
+
+💰 Oportunidad de recuperación aprovechada
+
+Y el título sería
+
+Cada llamada atendida el sábado es una oportunidad de recuperación que antes se perdía.
+
+O incluso algo más fuerte:
+
+Convertimos un día sin capacidad de atención especializada en un día productivo para la recuperación.
+
+Hay una frase que suele gustar mucho a los gerentes
+
+No digas:
+
+"La web permite consultar información."
+
+Di:
+
+"La solución elimina la dependencia del horario del especialista y convierte cada llamada del sábado en una oportunidad real de recuperación."
+
+Esa frase cambia totalmente la conversación. Ya no estás hablando de tecnología; estás hablando de ingresos que antes se escapaban.
+
+Te haría una pregunta para ayudarte a cuantificar ese impacto:
+
+De esas 560 llamadas CJ de los sábados, ¿cuántas terminan en una promesa de pago o en un pago efectivo, y cuál es el monto promedio recuperado? Con esos dos datos podemos estimar cuánto dinero adicional podría generar la solución y construir un caso de negocio mucho más sólido.
