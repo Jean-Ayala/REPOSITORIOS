@@ -1,0 +1,145 @@
+WITH intentos AS (
+    SELECT
+        i.[Contact Id]                                     AS contact_id,
+        i.[Campaign Name]                                  AS campania,
+        i.PERIODO                                          AS periodo,
+        i.[Date]                                           AS fecha,
+        i.[Start]                                          AS hora_inicio,
+
+        DATEPART(HOUR, i.[Start])                          AS hora,
+
+        DATENAME(WEEKDAY, i.[Date])                        AS dia_semana,
+
+        RIGHT(CAST(i.DNIS AS VARCHAR(50)), 9)              AS telefono,
+
+        i.[Wrap-Up]                                        AS tipificacion,
+
+        c.TIPO_RESULTADO                                    AS tipo_resultado,
+        c.SUBTIPO_RESULTADO                                 AS subtipo_resultado,
+
+        CASE
+            WHEN DATEPART(HOUR, i.[Start]) BETWEEN 7 AND 12 
+                THEN 'AM'
+            WHEN DATEPART(HOUR, i.[Start]) BETWEEN 13 AND 18 
+                THEN 'PM'
+            ELSE 'FUERA DE HORARIO'
+        END AS franja,
+
+        ROW_NUMBER() OVER (
+            PARTITION BY 
+                i.[Contact Id],
+                i.PERIODO,
+                i.[Date],
+                i.[Campaign Name]
+            ORDER BY i.[Start]
+        ) AS nro_intento
+
+    FROM YKR_TB_COB_INTENTOS_BKP i
+
+    LEFT JOIN OB_CONCLUSIONES_CLOUD_5 c
+        ON i.[Wrap-Up] = c.CONLUSION_CLOUD
+
+    WHERE i.[Campaign Name] IN (
+        'COB_BPE_00',
+        'COB_BPE_01',
+        'COB_BPE_02'
+    )
+    AND i.PERIODO IN (
+        '202605',
+        '202606',
+        '202608'
+    )
+),
+
+/* ============================================================
+   PRIMER CONTACTO EFECTIVO
+   ============================================================ */
+
+primer_ce AS (
+    SELECT
+        contact_id,
+        periodo,
+        campania,
+        nro_intento AS intento_ce,
+        telefono AS dnis_ce,
+        hora AS hora_ce,
+        franja AS franja_ce,
+        hora_inicio AS timestamp_ce
+
+    FROM (
+        SELECT
+            *,
+            ROW_NUMBER() OVER (
+                PARTITION BY contact_id, periodo
+                ORDER BY nro_intento
+            ) AS rn_ce
+
+        FROM intentos
+
+        WHERE tipo_resultado IN (
+            'CONTACTO - EFECTIVO',
+            'PDP - FDP'
+        )
+    ) x
+
+    WHERE rn_ce = 1
+),
+
+/* ============================================================
+   PRIMERA PROMESA
+   ============================================================ */
+
+primer_pp AS (
+    SELECT
+        contact_id,
+        periodo,
+        campania,
+        nro_intento AS intento_promesa,
+        telefono AS dnis_pp,
+        hora AS hora_pp,
+        franja AS franja_pp,
+        hora_inicio AS timestamp_pp
+
+    FROM (
+        SELECT
+            *,
+            ROW_NUMBER() OVER (
+                PARTITION BY contact_id, periodo
+                ORDER BY nro_intento
+            ) AS rn_pp
+
+        FROM intentos
+
+        WHERE tipo_resultado = 'PDP'
+    ) x
+
+    WHERE rn_pp = 1
+)
+
+/* ============================================================
+   RESULTADO FINAL
+   ============================================================ */
+
+SELECT
+    COALESCE(ce.contact_id, pp.contact_id) AS contact_id,
+    COALESCE(ce.periodo, pp.periodo)      AS periodo,
+
+    -- CONTACTO EFECTIVO
+    ce.intento_ce,
+    ce.dnis_ce,
+    ce.hora_ce,
+    ce.franja_ce,
+    ce.timestamp_ce,
+
+    -- PROMESA
+    pp.intento_promesa,
+    pp.dnis_pp,
+    pp.hora_pp,
+    pp.franja_pp,
+    pp.timestamp_pp
+
+FROM primer_ce ce
+
+FULL OUTER JOIN primer_pp pp
+    ON ce.contact_id = pp.contact_id
+    AND ce.periodo = pp.periodo;
